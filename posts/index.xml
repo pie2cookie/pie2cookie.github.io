@@ -3,7 +3,23 @@
         <title>All Posts - My New Hugo Site</title>
         <link>http://example.org/posts/</link>
         <description>All Posts | My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 22 Apr 2023 10:40:45 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 22 Apr 2023 11:04:12 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>随机梯度下降相关</title>
+    <link>http://example.org/posts/%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%9B%B8%E5%85%B3/</link>
+    <pubDate>Sat, 22 Apr 2023 11:04:12 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%9B%B8%E5%85%B3/</guid>
+    <description><![CDATA[graph TD A(SGD) --&gt;|梯度| B(Momentum) A --&gt;|学习率| C(AdaGrad) SGD随机梯度下降 batch size对梯度的影响 $$ \begin{aligned} VarL &amp;= Var\frac{1}{m}\sum_{i=1}^m L(x_i,y_i) \ &amp;= \frac{1}{m}Var\sum_{i=1}^m L(x_i,y_i) \end{aligned} $$ 假如想要保持原来数据的梯度方差，可以增大学习率lr（learning-rate）。
+只要lr取$ \sqrt m$，上式就变成原来的方差。这也说明batch size设置较大时，一般学习率要增大。但是lr的增大不是一开始就设置的很大，而是在训练过程中慢慢变大。
+https://zhuanlan.zhihu.com/p/415332894
+使用小批量的训练倾向于收敛到平坦的极小化，该极小化在极小化的小邻域内仅略有变化，而大批量则收敛到尖锐的极小化，这变化很大。平面minimizers 倾向于更好地泛化，因为它们对训练集和测试集之间的变化更加鲁棒 。
+此外，他们发现与大批量训练相比，小批量训练可以找到距离初始权重更远的最小值。他们解释说，小批量训练可能会为训练引入足够的噪声，以退出锐化minimizers 的损失池，而是找到可能更远的平坦minimizers
+学习率和批量大小密切相关——小批量在较小的学习率下表现最好，而大批量在较大的学习率下表现最好。我们可以在下面看到这种现象：
+能学到什么 线性缩放规则：当 minibatch 大小乘以 k 时，将学习率乘以 k。尽管我们最初发现大批量性能更差，但我们能够通过提高学习率来缩小大部分差距。我们看到这是由于较大的批次大小应用了较小的批次更新，这是由于批次内梯度向量之间的梯度竞争。
+选择合适的学习率时，较大的批量尺寸可以更快地训练，特别是在并行化时。对于大批量，我们不受 SGD 更新的顺序性质的限制，因为我们不会遇到与将许多小批量顺序加载到内存中相关的开销。我们还可以跨训练示例并行化计算。
+然而，当学习率没有针对较大的批量大小向上调整时，大批量训练可能比小批量训练花费的时间更长，因为它需要更多的训练时期来收敛。因此，您需要调整学习率以实现更大批量和并行化的加速。]]></description>
+</item>
+<item>
     <title>Blog</title>
     <link>http://example.org/posts/blog/</link>
     <pubDate>Sat, 22 Apr 2023 10:40:45 &#43;0800</pubDate>
