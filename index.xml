@@ -6,6 +6,15 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 22 Apr 2023 10:40:45 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Blog</title>
+    <link>http://example.org/posts/blog/</link>
+    <pubDate>Sat, 22 Apr 2023 10:40:45 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/blog/</guid>
+    <description><![CDATA[GitHub Pages + Hugo =easy blog 感谢Lilian Lee 构建后，如果要添加一篇博客，使用如下几步即可：
+新建一篇文章，编辑内容。hugo new posts/my-post.md 本地(http://localhost:1313)预览网站呈现效果。hugo server -D 构建 Hugo 网站。hugo 提交修改至 Git 本地库。 #public目录下 git status # 查看当前修改状态。 git add . # 添加所有修改过的文件。你也可以只添加某个文件。 git commit -m &#34;Add a new post&#34; # &#34;Add a new post&#34; 是 commit message. 将修改推至远程库。git push -u origin master#public目录下 ]]></description>
+</item>
+<item>
     <title>First_post</title>
     <link>http://example.org/posts/first_post/</link>
     <pubDate>Wed, 22 Mar 2023 00:33:38 &#43;0800</pubDate>
