@@ -3,9 +3,18 @@
         <title>My New Hugo Site</title>
         <link>http://example.org/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 22 Apr 2023 11:04:12 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 23 Apr 2023 16:31:35 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>训练大模型</title>
+    <link>http://example.org/posts/%E8%AE%AD%E7%BB%83%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+    <pubDate>Sun, 23 Apr 2023 16:31:35 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://example.org/posts/%E8%AE%AD%E7%BB%83%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+    <description><![CDATA[并行(parallelism)是必要的。并行可以发生在不同的维度上，包括数据、模型架构和张量操作。
+训练非常大的神经网络模型的主要瓶颈是对大量GPU内存的强烈需求，远远超过单个GPU机器所能承载的内存。除了模型权重(例如数百亿浮点数)之外，存储中间计算输出(例如梯度和优化器状态(例如Adam中的动量和变化))通常更加昂贵。此外，训练大型模型通常与大型训练语料库配对]]></description>
+</item>
+<item>
     <title>随机梯度下降相关</title>
     <link>http://example.org/posts/%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%9B%B8%E5%85%B3/</link>
     <pubDate>Sat, 22 Apr 2023 11:04:12 &#43;0800</pubDate>
@@ -28,7 +37,8 @@ https://zhuanlan.zhihu.com/p/415332894
     <author>xxxx</author>
     <guid>http://example.org/posts/blog/</guid>
     <description><![CDATA[GitHub Pages + Hugo =easy blog 感谢Lilian Lee 构建后，如果要添加一篇博客，使用如下几步即可：
-新建一篇文章，编辑内容。hugo new posts/my-post.md 本地(http://localhost:1313)预览网站呈现效果。hugo server -D 构建 Hugo 网站。hugo 提交修改至 Git 本地库。 #public目录下 git status # 查看当前修改状态。 git add . # 添加所有修改过的文件。你也可以只添加某个文件。 git commit -m &#34;Add a new post&#34; # &#34;Add a new post&#34; 是 commit message. 将修改推至远程库。git push -u origin master#public目录下 ]]></description>
+新建一篇文章，编辑内容。hugo new posts/my-post.md 本地(http://localhost:1313)预览网站呈现效果。hugo server -D 构建 Hugo 网站。hugo 提交修改至 Git 本地库。 #public目录下 git status # 查看当前修改状态。 git add . # 添加所有修改过的文件。你也可以只添加某个文件。 git commit -m &#34;Add a new post&#34; # &#34;Add a new post&#34; 是 commit message. 将修改推至远程库。git push -u origin master#public目录下 vpn导致git push时报错kex_exchange_identification: Connection closed by remote host https://blog.csdn.net/weixin_43561029/article/details/121258685
+config.toml中修改math开关，解决latex渲染问题]]></description>
 </item>
 <item>
     <title>First_post</title>
